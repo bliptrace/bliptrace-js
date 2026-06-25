@@ -46,5 +46,8 @@
   "homepage": "https://scope.g8suite.com",
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
   }
 }

@@ -17,6 +17,12 @@ export interface ConfigOptions {
   enabled?: boolean;
   sdkName?: string;
   sdkVersion?: string;
+  /** Max transport retries after the first attempt (transport errors, 408, 429, 5xx). */
+  maxRetries?: number;
+  /** Base backoff delay in milliseconds for exponential retry. */
+  retryBaseMs?: number;
+  /** Hard cap on any single retry delay in milliseconds. */
+  retryCapMs?: number;
 }
 
 /** Immutable SDK configuration. Framework adapters build this from their config. */
@@ -34,6 +40,9 @@ export class Config {
   readonly enabled: boolean;
   readonly sdkName: string;
   readonly sdkVersion: string;
+  readonly maxRetries: number;
+  readonly retryBaseMs: number;
+  readonly retryCapMs: number;
 
   constructor(opts: ConfigOptions = {}) {
     this.key = opts.key ?? null;
@@ -49,5 +58,8 @@ export class Config {
     this.enabled = opts.enabled ?? true;
     this.sdkName = opts.sdkName ?? 'g8scope-js';
     this.sdkVersion = opts.sdkVersion ?? '1.0.0';
+    this.maxRetries = opts.maxRetries ?? 2;
+    this.retryBaseMs = opts.retryBaseMs ?? 100;
+    this.retryCapMs = opts.retryCapMs ?? 2000;
   }
 }

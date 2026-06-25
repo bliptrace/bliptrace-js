@@ -1,6 +1,7 @@
 import { Config, type ConfigOptions } from './config.js';
 import { buildEnvelope } from './envelope.js';
 import { Scrubber } from './scrubber.js';
+import { RetryPolicy } from './retry-policy.js';
 import { FetchTransport, type Transport } from './transport.js';
 import type { Context, Envelope } from './types.js';
 
@@ -16,7 +17,7 @@ export class Client {
 
   constructor(config: Config | ConfigOptions, transport?: Transport, scrubber?: Scrubber) {
     this.config = config instanceof Config ? config : new Config(config);
-    this.transport = transport ?? new FetchTransport();
+    this.transport = transport ?? new FetchTransport(RetryPolicy.fromConfig(this.config));
     this.scrubber = scrubber ?? new Scrubber(this.config.scrubKeys);
   }
 
