@@ -2,8 +2,8 @@
 
 Runtime JavaScript/TypeScript SDK for [g8scope](https://scope.g8suite.com) — build, scrub and ship
 error envelopes to the ingest API. Works in **Node 18+** and the **browser** (uses the global
-`fetch`). Framework SDKs like [`g8scope-express`](../g8scope-express) and
-[`g8scope-nextjs`](../g8scope-nextjs) are thin adapters on top of this.
+`fetch`). Framework SDKs like [`bliptrace-express`](../bliptrace-express) and
+[`bliptrace-nextjs`](../bliptrace-nextjs) are thin adapters on top of this.
 
 ## Install
 
@@ -37,7 +37,7 @@ try {
 - `buildEnvelope()` / `sendEnvelope()` let adapters defer the send (e.g. after an HTTP response).
 - Transport is pluggable (`Transport` interface); the default is the dependency-free `FetchTransport`.
 
-The envelope conforms to the `g8scope-contracts` schema (v1). The project is resolved **server-side**
+The envelope conforms to the `bliptrace-contracts` schema (v1). The project is resolved **server-side**
 from the ingest key — it is never sent in the payload, so a client cannot spoof another tenant.
 
 ## Develop

@@ -41,7 +41,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/developers-hub-my/g8scope-js.git"
+    "url": "git+https://github.com/bliptrace/bliptrace-js.git"
   },
   "homepage": "https://scope.g8suite.com",
   "engines": {
