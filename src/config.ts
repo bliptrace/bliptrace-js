@@ -56,7 +56,7 @@ export class Config {
     this.scrubKeys = opts.scrubKeys ?? [];
     this.basePath = opts.basePath ?? '';
     this.enabled = opts.enabled ?? true;
-    this.sdkName = opts.sdkName ?? 'g8scope-js';
+    this.sdkName = opts.sdkName ?? 'bliptrace-js';
     this.sdkVersion = opts.sdkVersion ?? '1.0.0';
     this.maxRetries = opts.maxRetries ?? 2;
     this.retryBaseMs = opts.retryBaseMs ?? 100;

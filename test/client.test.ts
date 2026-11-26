@@ -21,7 +21,7 @@ describe('Client', () => {
     expect(env.schema_version).toBe('1.0');
     expect(env.event_id).toMatch(/^[0-9a-f-]{36}$/);
     expect(env.runtime.name).toBe('javascript');
-    expect(env.sdk?.name).toBe('g8scope-js');
+    expect(env.sdk?.name).toBe('bliptrace-js');
     expect(env.exception.type).toBe('RangeError');
     expect(env.exception.message).toBe('boom');
     expect(env.exception.frames.length).toBeGreaterThan(0);

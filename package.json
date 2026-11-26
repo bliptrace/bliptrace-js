@@ -1,9 +1,9 @@
 {
-  "name": "@g8scope/js",
+  "name": "@bliptrace/js",
   "version": "1.0.0",
-  "description": "Runtime JavaScript/TypeScript SDK for g8scope — build, scrub and ship error envelopes to the ingest API. Works in Node and the browser; framework SDKs (g8scope-express, g8scope-nextjs) extend this.",
+  "description": "Runtime JavaScript/TypeScript SDK for Bliptrace — build, scrub and ship error envelopes to the ingest API. Works in Node and the browser; framework SDKs (bliptrace-express, bliptrace-nextjs) extend this.",
   "keywords": [
-    "g8scope",
+    "bliptrace",
     "error-tracking",
     "observability",
     "sdk",

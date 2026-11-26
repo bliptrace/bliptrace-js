@@ -1,6 +1,6 @@
-# @g8scope/js
+# @bliptrace/js
 
-Runtime JavaScript/TypeScript SDK for [g8scope](https://scope.g8suite.com) — build, scrub and ship
+Runtime JavaScript/TypeScript SDK for [Bliptrace](https://scope.g8suite.com) — build, scrub and ship
 error envelopes to the ingest API. Works in **Node 18+** and the **browser** (uses the global
 `fetch`). Framework SDKs like [`bliptrace-express`](../bliptrace-express) and
 [`bliptrace-nextjs`](../bliptrace-nextjs) are thin adapters on top of this.
@@ -8,13 +8,13 @@ error envelopes to the ingest API. Works in **Node 18+** and the **browser** (us
 ## Install
 
 ```bash
-npm install @g8scope/js
+npm install @bliptrace/js
 ```
 
 ## Usage
 
 ```ts
-import { Client, Config } from '@g8scope/js';
+import { Client, Config } from '@bliptrace/js';
 
 const g8 = new Client(new Config({
   key: 'your-ingest-key',
@@ -50,4 +50,4 @@ npm run build   # tsup -> dist (esm + cjs + d.ts)
 
 ---
 
-_Developers Hub Sdn Bhd · @g8scope/js_
+_Developers Hub Sdn Bhd · @bliptrace/js_

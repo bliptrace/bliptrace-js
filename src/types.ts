@@ -1,4 +1,4 @@
-/** The language-neutral g8scope error envelope (schema v1). */
+/** The language-neutral Bliptrace error envelope (schema v1). */
 export interface Frame {
   file: string;
   line: number;

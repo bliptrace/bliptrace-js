@@ -1,7 +1,7 @@
 import type { Config } from './config.js';
 import type { Context, Envelope, Frame } from './types.js';
 
-/** Builds the language-neutral g8scope error envelope from an Error. */
+/** Builds the language-neutral Bliptrace error envelope from an Error. */
 export function buildEnvelope(err: Error, config: Config, context: Context = {}): Envelope {
   const level = err instanceof RangeError || err instanceof EvalError ? 'fatal' : 'error';
 
