@@ -46,7 +46,7 @@ export class Config {
 
   constructor(opts: ConfigOptions = {}) {
     this.key = opts.key ?? null;
-    this.endpoint = opts.endpoint ?? 'https://ingest.scope.g8suite.com';
+    this.endpoint = opts.endpoint ?? 'https://ingest.bliptrace.com';
     this.environment = opts.environment ?? 'production';
     this.release = opts.release ?? null;
     this.timeout = opts.timeout ?? 3000;

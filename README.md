@@ -1,6 +1,6 @@
 # @bliptrace/js
 
-Runtime JavaScript/TypeScript SDK for [Bliptrace](https://scope.g8suite.com) — build, scrub and ship
+Runtime JavaScript/TypeScript SDK for [Bliptrace](https://bliptrace.com) — build, scrub and ship
 error envelopes to the ingest API. Works in **Node 18+** and the **browser** (uses the global
 `fetch`). Framework SDKs like [`bliptrace-express`](../bliptrace-express) and
 [`bliptrace-nextjs`](../bliptrace-nextjs) are thin adapters on top of this.
@@ -18,7 +18,7 @@ import { Client, Config } from '@bliptrace/js';
 
 const g8 = new Client(new Config({
   key: 'your-ingest-key',
-  endpoint: 'https://ingest.scope.g8suite.com',
+  endpoint: 'https://ingest.bliptrace.com',
   environment: 'production',
   release: 'my-app@1.0.0',
   basePath: process.cwd(),          // for in-app frame detection (Node)
